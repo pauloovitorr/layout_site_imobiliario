@@ -52,7 +52,7 @@ function carrossel(){
     container_destaque.style.transform = `translateX(-${largura}px)`
 }
 
-// setInterval(carrossel, 2500)
+
 
 // Função radio carrosesel
 
@@ -131,8 +131,6 @@ function carrossel_venda(){
     
     container_venda.style.transform = `translateX(-${largura_imoveis_venda}px)`
 }
-
-// setInterval(carrossel_venda, 2000)
 
 
 

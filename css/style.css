@@ -580,16 +580,7 @@
 }
 
 
-/* .imoveis_destaque .imovel_destaque {
-    height: 550px;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 0px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    margin-right: 48px;
-    cursor: pointer;
-} */
+
 
 .pai_img_destaque {
     width: 100%;
@@ -2300,6 +2291,48 @@ body > main > section.container_atualizado > div.titulo_atualizados > div:nth-ch
 
 .card_servido{
     margin-top: 0px;
+}
+
+
+.opcoes_rodape{
+    width: 95% !important;
+    margin-top: 10px;
+}
+
+.info_rodape{
+    width: 95% !important;
+}
+
+
+.direitos_rodape{
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.direitos_rodape div{
+    width: 98%;
+    height: auto;
+    flex-direction: column-reverse !important;
+    justify-content: center;
+}
+
+.direitos_rodape div span{
+    font-size: 13px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+body > main > section.container_destaque > div.container_imoveis_destaque.aos-init.aos-animate > div.imoveis_destaque > a > div > div.container_texto_imovel > div.caracteristicas{
+    gap: 1px;
+}
+
+body > main > section.container_destaque > div.container_imoveis_destaque.aos-init.aos-animate > div.imoveis_destaque > a > div > div.container_texto_imovel > div.caracteristicas > div > p{
+    font-size: 13px !important;
+}
+
+body > main > section.container_destaque > div.container_imoveis_destaque.aos-init.aos-animate > div.imoveis_destaque > a > div > div.container_texto_imovel > div.caracteristicas > div > svg{
+    width: 18px;
 }
 
 
