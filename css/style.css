@@ -1,0 +1,1626 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-display: swap;
+    font-family: "Hind", sans-serif;
+}
+
+:root{
+    --bk_menu: #0E74CA;
+    --bk_escuro: #183044;
+    --bk_hover: #daeeff;
+    --bk_branco_secun: #858585;
+    --bk_branco_terc: #E6E6E6;
+    --secun2: #707070;
+    --preto: #141414;
+}
+
+
+/* ::-webkit-scrollbar {
+    width: 14px;
+    height: 12px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bk_menu);
+    border-radius: 3px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--bk_escuro);
+  } */
+  
+
+
+
+.icone_menu{
+    display: none !important;
+}
+
+.nav_lat{
+    position: fixed;
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    right: -100%;
+    background-color: #181818;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+    transition: .5s;
+}
+
+.nav_lat_open{
+    width: 40%;
+    right: 0px;
+}
+
+.fechar_menu{
+    width: 90%;
+    height: 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.fechar_menu i{
+   font-size: 30px;
+   width: 80px;
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+}
+
+
+.nav_lat ul{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.opcoes_lat{
+    width: 80%;
+    height: auto;
+}
+
+.opcoes_lat ul{
+    height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.opcoes_lat ul li{
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.opcoes_lat ul li a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    position: relative;
+    right: 0%;
+    transition: .3s;
+}
+
+
+
+.opcoes_lat button{
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--bk_menu);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: .5s;
+}
+
+.lb-dataContainer{
+    width: 95% !important;
+    /* border: 1px solid rgb(255, 0, 106); */
+    font-family: var(--titulo);
+    position: absolute;
+    top: -45px;
+    padding-top: 10px;
+  }
+  
+  .lb-caption{
+    display: none !important;
+  }
+  
+  .lb-next,
+  .lb-prev{
+    width: 20% !important;
+    opacity: 1 !important;
+  }
+  
+  
+  .lb-number{
+    width: 30%;
+    margin: 0 auto;
+    text-align: end;
+    /* border: 1px solid red; */
+    color: white !important;
+  }
+  
+  .lb-outerContainer{
+    width: 65% !important;
+    height: 55% !important;
+    /* border: 2px solid red; */
+  }
+  
+  .lb-outerContainer img{
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  
+  
+  #lightboxOverlay{
+    background-color: #000000;
+    opacity: 0.9;
+  }
+
+
+  .lb-image{
+    max-height: 800px !important;
+  }
+  
+  
+  
+  .lightbox .lb-image{
+    border: none !important;
+  }
+  
+  #lightbox > div.lb-outerContainer > div > div.lb-loader{
+    display: none !important;
+  }
+  
+  .lb-outerContainer{
+    background-color: #15151586;
+  }
+  
+  
+  
+  .lightboxOverlay{
+    display: none;
+  }
+
+
+
+
+
+header{
+    height: 100px;
+    width: 100%;
+    background-color: var(--bk_menu);
+}
+
+.menu{
+    width: 90%;
+    height: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+
+.logo img{
+    margin-top: 14px;
+}
+
+nav{
+    width: 50%;
+    height: 100%;
+}
+
+nav ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 18px;
+}
+
+
+nav ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--bk_escuro);
+    transition: .3s;
+}
+
+
+
+nav ul li a:hover::after{
+    height: 2px;
+    width: 50%;
+}
+
+
+
+nav ul button{
+    width: 35%;
+    height: 45px;
+    border-radius: 8px;
+    color: var(--preto);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: .5s;
+}
+
+
+
+
+
+
+nav ul i{
+    font-size: 24px;
+    color: white;
+}
+
+nav ul button i{
+    font-size: 18px;
+    color: var(--bk_menu);
+}
+
+nav ul button:hover{
+    background-color: var(--bk_hover);
+}
+
+.section_banner{
+    width: 100%;
+}
+
+.caminho_navegacao{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.caminho_navegacao ul{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.caminho_navegacao ul li a{
+    text-decoration: none;
+    color: var(--bk_branco_secun);
+}
+
+
+.caminho_navegacao ul li a:last-child {
+    font-size: 18px;
+    color: var(--bk_menu);
+}
+
+.caminho_navegacao ul li i{
+    font-size: 12px;
+    color: var(--bk_menu);
+}
+
+.compartilhar{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 4px;
+}
+
+.compartilhar ul li:nth-child(1){
+    width: 100%;
+    cursor: pointer;
+    text-align: end;
+    position: relative;
+}
+
+.compartilhar ul:nth-child(1) i{
+    font-size: 15px;
+    color: #2E2E2E;
+}
+
+.banners{
+    width: 90%;
+    height: 400px;
+    max-width: 1260px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.pai_banners{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.seta_carrossel{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.seta_carrossel div{
+    height: 100%;
+    width: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bk_menu);
+    font-size: 30px;
+    pointer-events: auto;
+}
+
+
+.banners img{
+    object-fit: cover;
+    object-position: center;
+    transition: .4s;
+}
+
+
+.banners img:hover{
+    filter: brightness(0.8);
+}
+
+
+.imagem_principal{
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+
+.info_banners {
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.info_banners div:nth-child(1),
+.info_banners div:nth-child(2) {
+    border-radius: 5px;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1414147a;
+    color: white;
+}
+
+.info_banners div:nth-child(1) span {
+    font-size: 15px;
+    line-height: 12px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.info_banners div:nth-child(1) svg {
+    width: 18px;
+    height: 16px;
+}
+
+.info_banners div:nth-child(2) i {
+    font-size: 18px; 
+}
+
+
+
+.imagem_principal a{
+    width: 100%;
+    height: 100%;
+}
+
+.imagem_principal a img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.imagens_banners{
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imagens_banners a{
+    width: 49%;
+    height: 49%;
+}
+
+.imagens_banners a:nth-child(1),
+.imagens_banners a:nth-child(3){
+    margin-left: 1%;
+}
+
+
+.imagens_banners a:nth-child(3),
+.imagens_banners a:nth-child(4){
+    margin-top: 1%;
+}
+
+
+.imagens_banners a:nth-child(5),
+.imagens_banners a:nth-child(6){
+    margin-top: 1%;
+}
+
+
+
+.imagens_banners a img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.container_info{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.pai_info{
+    width: 90%;
+    height: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.textos{
+    width: 73%;
+    height: 100%;
+    padding: 5px 0px 0px 0px;
+}
+
+.textos h1{
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.valores_imovel {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.valores {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.valores span {
+    margin-bottom: -12px;
+    padding: 0;
+    color: var(--secun2);
+}
+
+.valores h2 {
+    display: inline;
+    font-size: 28px;
+    color: var(--bk_menu);
+}
+
+
+.detalhe_valor{
+    width: auto;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.detalhe_valor i{
+    font-size: 6px;
+    color: var(--secun2);
+}
+
+.detalhe{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+
+.detalhe span:nth-child(1){
+    margin-bottom: -10px;
+    color:  var(--secun2);
+}
+
+.detalhe span:nth-child(2){
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+
+.pai_caracteristicas{
+    display: flex;
+    height: 90px;
+    margin-top: 10px;
+    border-top: 1px solid var(--bk_branco_terc);
+    border-bottom: 1px solid var(--bk_branco_terc);
+}
+
+
+.caracteristica{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    gap: 10px;
+}
+
+.caracteristica span{
+    font-size: 20px;
+    /* border: 1px solid red; */
+    line-height: 15px;
+}
+
+
+
+.pai_palavras{
+    margin-top: 30px;
+    width: 80%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.pai_palavras p,
+.proximidades_bairro p{
+    display: inline;
+    color: var(--bk_escuro);
+    border: 1px solid var(--bk_escuro);
+    border-radius: 3px;
+    margin: 0;   
+    padding: 5px; 
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.descricao_imovel{
+    width: 98%;
+    height: auto;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--bk_branco_terc);
+    /* border: 1px solid red; */
+}
+
+
+.descricao_imovel h3{
+    font-size: 26px;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+.descricao_imovel p{
+    color: #4d4d4d;
+    margin-top: 10px;
+    line-height: 22px;
+}
+
+
+
+.proximidades_bairro{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+.descricao_imovel button{
+    width: 100%;
+    margin-top: 30px;
+    height: 50px;
+    padding: 8px 0px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: var(--bk_escuro);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.descricao_imovel button:hover{
+    background-color: #0F1D28 ;
+}
+
+
+.form{
+    position: relative;
+    width: 26%;
+    height: auto;
+}
+
+.form_contatos{
+    height: auto;
+    position: sticky;
+    top: 10px; 
+}
+
+
+.pai_form{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    border-radius: 4px;
+    background-color: #ffd590;
+    border: 1px solid #e1a94d;
+   
+}
+
+
+.pai_form2{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    padding-bottom: 20px;
+    border-radius: 4px;
+    background-color: #c4ebcd;
+    border: 1px solid #006d19;
+}
+
+
+.pai_form p,
+.pai_form2 p{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.pai_input{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.pai_text{
+    width: 80%;
+    min-height: 80px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.pai_text textarea{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #e1a94d;
+    resize: vertical;
+}
+
+.pai_input input{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #e1a94d;
+}
+
+
+.pai_valida{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pai_valida input{
+    width: 40%;
+    height: 100%;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #e1a94d;
+}
+
+
+.pai_input button{
+    background-color: #ff3f00;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, .12);
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+div.form > div > div.pai_form2 > form > div > input[type=text],
+div.pai_form2 > form > div > input[type=tel]{
+    border: 1px solid #006d19
+}
+
+div.form > div > div.pai_form2 > form > div > button{
+    background-color: #006d19
+}
+
+
+
+.imoveis_similares{
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid var(--bk_branco_terc);
+}
+
+.imoveis_similares h3,
+.container_buscas h3{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.pai_similares{
+    width: 90%;
+    height: auto;
+    max-width: 1260px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5%;
+    
+}
+
+
+.imovel_similar{
+    width: 31%;
+    height: 410px;
+    margin-top: 15px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1); 
+    transition: .3s;
+}
+
+.imovel_similar:hover .pai_imagen img{
+    scale: 1.06;
+}
+
+
+.imovel_similar:hover{
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); 
+}
+
+
+.pai_imagen{
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+}
+
+.pai_imagen div{
+    width: 100%;
+    height: 100%;
+}
+
+.pai_imagen img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: .3s;
+}
+
+.pai_infos_similar{
+    width: 100%;
+    height: 35%;
+    padding: 8px;
+}
+
+.titulo span{
+    font-size: 18px;
+    color: #1F1F1F;
+    /* border: 1px solid red; */
+}
+
+.caracteristica_similar p{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--preto);
+    margin-bottom: -8px;
+}
+
+div.pai_infos_similar > div.caracteristica_similar > div{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.caracteristica_similar{
+    margin-top: 2px;
+    margin-bottom: 6px;
+    /* border: 1px solid red; */
+}
+
+.caracteristica_imo_similar{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+}
+
+.caracteristica_imo_similar i{
+    font-size: 5px;
+    color: var(--secun2);
+    margin-right: 6px;
+    /* border: 1px solid red; */
+}
+
+.btns_similar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.btns_similar span{
+    cursor: pointer;
+}
+
+.btns_similar a{
+    text-decoration: none;
+    border: 1px solid var(--bk_escuro);
+    color: var(--bk_escuro);
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.btns_similar a:hover{
+    background-color: var(--bk_escuro);
+    color: var(--bk_branco_terc);
+}
+
+
+.container_buscas{
+    width: 100%;
+    margin-top: 70px;
+}
+
+.pai_busca_rapida{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1260px;
+    display: flex;
+    gap: 1%;
+    
+}
+
+.opcoes_busca{
+    width: 33%;
+    padding: 5px;
+}
+
+.pai_busca_rapida a{
+    text-decoration:none;
+    color: var(--preto);
+    transition: .2s;
+}
+
+.pai_busca_rapida a:hover{
+    color: var(--bk_menu);
+    margin-left: 3px;
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    background-color: var(--bk_escuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 30px 0px; */
+}
+
+.pai_rodape{
+    width: 90%;
+    height: 60%;
+    max-width: 1260px;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* border: 1px solid rgb(140, 0, 255); */
+    display: flex;
+    justify-content: space-between;
+}
+
+.pai_opcoes{
+    width: 32%;
+    
+}
+
+.pai_rodape div h4{
+    font-size: 26px;
+    color: white;
+    font-weight: 500;
+}
+
+.opcoes_rodape{
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+}
+
+.opcoes_rodape ul{
+    list-style: none;
+}
+
+.opcoes_rodape ul a{
+    color: #E6E6E6;
+    text-decoration: none;
+    transition: .2s;
+}
+
+
+.opcoes_rodape ul a:hover{
+    margin-left: 3px;
+    color: var(--bk_menu);
+}
+
+.opcoes_rodape p{
+    color: #E6E6E6;
+}
+
+.logo_rodape{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--bk_menu);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.logo_rodape img{
+    margin-top: 10px;
+}
+
+.logo_rodape p{
+    color: white;
+}
+
+.logo_rodape a{
+    color: #186AAF;
+    text-decoration: none;
+}
+
+
+.shareon {
+    width: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    right: 0%;
+    top: 40px;
+    background-color: #ffffff;
+    padding: 8px 0px;
+    z-index: 20;
+    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.shareon::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--bk_menu);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 21;
+}
+
+.shareon a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    transition: .3s;
+    border: none;
+}
+
+.shareon a:hover{
+    
+    background-color: white
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; 
+    visibility: hidden;
+}
+
+
+
+.lista-img-container {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 999999;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .lista-img-container h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    font-weight: 400;
+    font-family: var(--titulo);
+  }
+  
+  
+  .close-lista-imagens {
+    width: 35px;
+    height: 35px;
+    margin: 0px 19px 0px auto;
+    display: block;
+    border: none;
+    position: fixed;
+    right: 0px;
+    top: 20px;
+    background: #212528c9;
+    cursor: pointer;
+  }
+  
+  
+  .lista-img {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .lista-img img {
+    max-width: 340px;
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+
+  .remover{
+    /* opacity: 0 !important; */
+    display: none !important;
+  }
+  
+  .exibir{
+    /* opacity: 1 !important; */
+    display: block !important;
+  }
+
+
+
+
+  /* CSS HOME */
+  
+
+
+@media (max-width:1320px){
+
+        
+    .caminho_navegacao ul li{
+        font-size: 12px;
+    }
+
+    .caminho_navegacao ul li i{
+        font-size: 8px;
+    }
+
+    .caminho_navegacao ul li a:last-child {
+        font-size: 14px;
+        color: var(--bk_menu);
+    }
+
+    .compartilhar{
+        width: 13%;
+    }
+
+    .compartilhar ul{
+        width: 100%;
+    }
+
+
+}
+
+
+@media (max-width:1180px){
+
+    nav{
+        width: 60%;
+    }
+
+    .textos h1{
+        line-height: 30px;
+    }
+
+    .valores_imovel{
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        padding: 15px 0px;
+    }
+
+    .pai_caracteristicas{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .caracteristica{
+        margin: 10px;
+    }
+
+    .pai_palavras{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .pai_similares{
+        gap: 1%;
+    }
+        
+    .imovel_similar{
+        width: 32%;
+        height: 410px;
+        margin-top: 15px;
+        box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1); 
+        transition: .3s;
+    }
+
+    .pai_busca_rapida a{
+        font-size: 15px;
+    }
+
+    .titulo span{
+        font-size: 14px;
+    }
+
+    
+
+}
+
+
+@media (max-width:918px) {
+    
+    nav ul li a{
+        font-size: 15px;
+    }
+
+    nav ul button{
+        font-size: 14px;
+    }
+
+    nav ul button i{
+        font-size: 14px;
+    }
+
+    .caminho_navegacao ul{
+        flex-wrap: wrap;
+    }
+
+    .textos h1{
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .caracteristica span{
+        font-size: 18px;
+    }
+
+    .imoveis_similares {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .caracteristica_similar p{
+        font-size: 15px;
+    }
+
+    div.pai_infos_similar > div.caracteristica_similar > div {
+        display: flex;
+        align-items: center;
+    }
+
+   div.caracteristica_similar > div > div > span{
+    font-size: 12px;
+   }
+
+   .btns_similar{
+    margin-top: 8px;
+   }
+
+   .btns_similar a {
+    padding: 6px 4px;
+    border-radius: 3px;
+    transition: .3s;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.btns_similar span{
+    font-size: 15px;
+}
+
+.btns_similar span i{
+    font-size: 13px;
+}
+
+.pai_opcoes h4{
+    font-size: 22px;
+}
+
+.opcoes_rodape ul a {
+    font-size: 14px;
+}
+
+.opcoes_rodape p{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.logo_rodape p{
+    font-size: 14px;
+}
+
+
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    .nav_lat_open{
+        width: 55%;
+    }
+    
+    nav ul li,
+    nav ul button{
+        display: none;
+    }
+
+    nav ul {
+        justify-content: end;
+    }
+
+    .icone_menu{
+        display: block !important;
+    }
+
+    .caminho_navegacao ul{
+        gap: 2px;
+    }
+
+    .caminho_navegacao ul li a{
+        font-size: 10px;
+    }
+
+    .compartilhar{
+        width: 16%;
+        gap: 4px;
+    }
+
+    .compartilhar ul li:nth-child(1){
+        font-size: 12px;
+    }
+
+    .caminho_navegacao ul li a:last-child{
+        font-size: 12px;
+    }
+
+    .pai_info{
+        flex-direction: column;
+    }
+
+    .textos{
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .form_contatos{
+        width: 50%;
+       margin: 0 auto;
+    }
+
+    .pai_form,
+    .pai_form2 {
+        width: 100%;
+    }
+
+    .pai_form2{
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+
+    .imovel_similar{
+        width: 380px;
+    }
+
+    .pai_similares {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .container_buscas{
+        margin-top: 30px;
+    }
+
+    .imoveis_similares h3,
+    .container_buscas h3{
+        font-size: 28px;
+        line-height: 26px;
+        width: 90%;
+    }
+
+    
+
+
+    .imagens_banners a:nth-child(1),
+.imagens_banners a:nth-child(3){
+    margin-left: 0%;
+}
+
+
+.imagens_banners a:nth-child(3),
+.imagens_banners a:nth-child(4){
+    margin-top: 0%;
+}
+
+    .imagem_principal{
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+   
+
+    .imagem_principal a img{
+        width: 100%;
+        height: 100%;
+    }
+  
+
+    .imagens_banners{
+        width: auto;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        /* border: 1px solid red; */
+    }
+
+
+    .imagens_banners a{
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .seta_carrossel{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .pai_busca_rapida{
+        flex-wrap: wrap;
+    }
+
+   .container_buscas{
+    display: none;
+   }
+
+   .imoveis_similares{
+    border-bottom: none;
+   }
+    
+}
+
+
+@media (max-width: 600px) {
+    
+    body > main > section.section_banner > div.caminho_navegacao > div > ul > li > span{
+        display: none;
+    }
+
+    .shareon{
+        right: -20px;
+    }
+
+    .nav_lat_open{
+        width: 100%;
+    }
+
+    .voltar,
+    .passar{
+        width: 10% !important;
+    }
+
+    .textos h1{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .valores{
+        width: 100%;
+        align-items: center;
+    }
+
+    .pai_caracteristicas{
+        justify-content: center;
+    }
+
+    .caracteristica{
+        width: 60px;
+    }
+    .caracteristica svg{
+        width: 15px;
+    }
+
+    .caracteristica span{
+        font-size: 12px;
+    }
+
+    .pai_palavras p,
+    .proximidades_bairro p{
+        font-size: 12px;
+    }
+
+    .descricao_imovel button{
+        font-size: 14px;
+    }
+
+    .form_contatos{
+        width: 100%;
+    }
+
+    .pai_rodape{
+        flex-wrap: wrap;
+    }
+
+    .pai_opcoes{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    body > footer > div.logo_rodape > a > img{
+        width: 130px;
+    }
+
+    body > footer > div.logo_rodape > p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+   
+
+}
+
