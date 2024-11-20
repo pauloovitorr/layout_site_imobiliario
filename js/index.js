@@ -545,3 +545,17 @@ function controla_auto_player_atualizados() {
 }
 
 setInterval(controla_auto_player_atualizados, 5000);
+
+
+// Função para controlar menu lateral
+let menu = document.querySelector('.menu_lat')
+let opcoes_lat = document.querySelector('.opcoes_menu_lat')
+let close_lat = document.querySelector('.close i')
+
+menu.addEventListener('click', function(){
+    opcoes_lat.classList.add('open_lat')
+})
+
+close_lat.addEventListener('click', function(){
+    opcoes_lat.classList.remove('open_lat')
+})
