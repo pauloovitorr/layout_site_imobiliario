@@ -262,6 +262,7 @@
     border-radius: 4px;
     display: flex;
     align-items: center;
+    border-radius: 12px;
     /* border: 2px solid red; */
 }
 
@@ -289,7 +290,8 @@
     border: none;
     font-size: 15px;
     padding: 0px 5px;
-    color: #1E1E1E
+    color: #1E1E1E;
+    border-radius: 8px;
 }
 
 #ref {
@@ -320,7 +322,7 @@
     color: #ffffff;
     cursor: pointer;
     transition: .5s;
-
+    border-radius: 8px;
 }
 
 .btn_pesquisar button:hover {
@@ -339,6 +341,7 @@
     color: #1E1E1E;
     background-color: #FCFCFC;
     margin-right: 15px;
+    border-radius: 8px;
 }
 
 .btn_filtros div {
@@ -347,6 +350,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-radius: 8px;
 }
 
 .extra {
@@ -542,6 +546,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 12px;
 }
 
 .titulo_sobre {
@@ -652,6 +657,7 @@
     width: 100%;
     height: 400px;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .img_imovel_destaque {
@@ -688,6 +694,7 @@
     display: block;
     border: 2px solid transparent;
     transition: width 0.5s, height 0.5s, border-color 0.5s;
+    border-radius: 8px;
 }
 
 .imoveis_destaque .imovel_destaque:hover .caracteristicas::after,
@@ -753,6 +760,7 @@
     justify-content: space-around;
     box-sizing: border-box;
     transition: .5s;
+    border-radius: 8px;
 }
 
 .caracteristicas div {
@@ -888,6 +896,7 @@
     height: 350px;
     /* border: 1px solid black; */
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .img_imovel_venda {
@@ -902,6 +911,7 @@
     object-fit: cover;
     object-position: center;
     transition: .5s;
+    border-radius: 12px;
 }
 
 .container_texto_venda {
@@ -933,6 +943,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .caracteristicas_imovel div {
@@ -1118,6 +1129,7 @@
     display: flex;
     align-items: center;
     transition: .5s;
+    border-radius: 12px;
 }
 
 .card_servido:hover{
