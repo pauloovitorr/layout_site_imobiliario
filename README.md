@@ -13,17 +13,18 @@ Este repositório contém o layout de um site imobiliário moderno, focado em **
 ## 🧩 Tecnologias Utilizadas
 
 - **HTML5** para a estrutura semântica das páginas.  
-- **CSS3** para estilização, espaçamentos, cores, tipografia e responsividade.  
+- **CSS3** para estilização, espaçamentos, cores, tipografia e responsividade.
+- **JAVASCRIPT** para a dinamização e o aumento de efeitos da página
 
 ## 📁 Estrutura do Projeto
 
 - `index.html`: página principal com a estrutura do layout.  
 - `css/`: arquivos de estilos responsáveis pela identidade visual do site.  
-- `assets/` ou `img/`: imagens utilizadas na composição do layout (banners, ilustrações, etc.).  
+- `img/`: imagens utilizadas na composição do layout (banners, ilustrações, etc.).  
 
 ## 🎯 Objetivo do Projeto
 
-Este layout foi desenvolvido como exercício de aperfeiçoamento em HTML e CSS voltado para o mercado imobiliário, servindo como:
+Este layout foi desenvolvido como exercício de aperfeiçoamento em HTML,CSS e JAVASCRIPT voltado para o mercado imobiliário, servindo como:
 
 - base visual para projetos futuros com frameworks ou backends;  
 - referência de UI para sistemas de cadastro e listagem de imóveis;  
